@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+set -e
+
+stack setup
+stack build
 
 # tangle main functionality
 pandoc-tangle --from=markdown --to=markdown --code=example --section='Pandoc Tangle' Tangle.md > README.md
